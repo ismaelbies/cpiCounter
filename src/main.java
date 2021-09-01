@@ -6,7 +6,7 @@ import java.io.IOException;
 public class main {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("C:/Users/isma/Desktop/dumpB.txt");
+        File file = new File("");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         int instrucaoTresCiclos = 0;
