@@ -32,16 +32,16 @@ public class Main {
         put("f100010", 3); //	sub
         put("f100011", 3); //	subu
         put("f100110", 4); //	xor
-        put("001110", null); //	xori
+        put("001110", 4); //	xori
         put("011001", null); //	lhi	
         put("011000", null); //	llo	
-        put("101010", null); // slt
+        put("101010", 4); // slt
 //        put("101001", null); // sltu
         put("001010", 4); // slti
-        put("001001", null); // sltiu
+        put("001001", 4); // sltiu
         put("000100", 3); // beq
-        put("000111", null); // bgtz
-        put("000110", null); // blez
+        put("000111", 3); // bgtz
+        put("000110", 3); // blez
         put("000101", 3); // bne
         put("000010", 3); // j
         put("000011", 3); // jal
