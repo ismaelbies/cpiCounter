@@ -37,7 +37,7 @@ public class Main {
         put("011000", null); //	llo	
         put("101010", null); // slt
 //        put("101001", null); // sltu
-        put("001010", null); // slti
+        put("001010", 4); // slti
         put("001001", null); // sltiu
         put("000100", 3); // beq
         put("000111", null); // bgtz
@@ -67,13 +67,13 @@ public class Main {
     final static int MAX_CICLOS = 5;
 
     public static void main(String[] args) throws IOException {
-//        if (args.length != 1) {
-//            System.err.printf(
-//                "Você deve informar o caminho absoluto do arquivo a ser 'parseado'.\n" +
-//                "Modo de uso: java -jar Main.java <caminho_do_arquivo>\n"
-//            );
-//            System.exit(-1);
-//        }
+        if (args.length != 1) {
+            System.err.printf(
+                "Você deve informar o caminho absoluto do arquivo a ser 'parseado'.\n" +
+                "Modo de uso: java -jar Main.java <caminho_do_arquivo>\n"
+            );
+            System.exit(-1);
+        }
 
         File file = new File(args[0]);
 
@@ -113,7 +113,7 @@ public class Main {
 
         for (int i = 0; i < MAX_CICLOS; i++) {
             System.out.printf("Total de instruções com %d ciclo(s): %d\n", i+1, ciclosDoProgramaPorLatencia[i]);
-            totalDeCiclos = (i+1)*ciclosDoProgramaPorLatencia[i];
+            totalDeCiclos += (i+1)*ciclosDoProgramaPorLatencia[i];
         }
         System.out.printf("Total de Ciclos: %d\n",totalDeCiclos);
     }
