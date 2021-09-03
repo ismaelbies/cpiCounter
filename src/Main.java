@@ -90,9 +90,9 @@ public class Main {
                 System.out.printf("Parseando linha %d: %s\n", i, linha);
                 instrucaoEmBits = linha.substring(0, 6);
 
-                if(instrucaoEmBits.equals("000000")) {
-                    instrucaoEmBits = linha.substring(linha.length() -6, linha.length());
-                }
+//                if(instrucaoEmBits.equals("000000")) {
+//                    instrucaoEmBits = linha.substring(linha.length() -6, linha.length());
+//                }
 
                 ciclosDaInstrucao = instrucoesLookup.get(instrucaoEmBits);
                 if (ciclosDaInstrucao == null) {
